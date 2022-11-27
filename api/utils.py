@@ -11,22 +11,23 @@ def filterDataRefPeriod(years, data):
             
             mydata.append(data_retuned)
         
-    return mydata
+    return mydata[0]
         
 
 
 
 def getYearsData(year, data):
-    finaldata={}
+    finaldata=[]
     
     for y in data:
        
         
         refperiod = y["refperiod"]
         if refperiod[0:4] == str(year):
-            print(y)
-            finaldata =y
+            # print(y)
+            finaldata.append(y)
       
     
-            return finaldata
+    
+    return finaldata
         
