@@ -20,7 +20,7 @@ from rest_framework.views import APIView
 
 
 from .serializers import *
-
+from .utils import filterDataRefPeriod
 
 # from .filters import FilterKilimoDomains
 
@@ -40,59 +40,137 @@ def data_list(request):
     if request.method == 'GET':
         req= request.GET
         data = KilimoData.objects.all()
-        if 'county' not in request.GET:
+        
+        # print(req)
+        
+        if 'subsector' in req:
+                
+            subsector = req["subsector"]
+            subsector = json.loads(subsector)
             
-            serializer = DataSerializer(data, context={'request': request}, many=True)
-
-            return Response(serializer.data)
-
-        else:
-            county = request.GET["county"]
-            
-            county  = json.loads(county)
-            
-            data = data.filter(county__in=county)
-            
-            if 'subsector' in req:
-                sector = req["subsector"]
-                sector = json.loads(sector)
-                print(sector)
-                data = data.filter(subsector__in = sector)
+            if len(subsector) != 0 :
+                print("subsector")
+                # print(data)
+                data = data.filter(subsector__in = subsector)
+                
+            if 'county' in request.GET:
+                county = request.GET["county"]
+                county  = json.loads(county)
+                
+                
+                if len(county) != 0 :
+                    print("county")
+                
+                    data = data.filter(county__in=county)
+                    
             
             if 'domain' in req:
                 domain = req["domain"]
                 domain = json.loads(domain)
-                
-                data = data.filter(domain__in = domain)
-
-            if 'elementitem' in req:
-                elementitem = req["elementitem"]
-                elementitem = json.loads(elementitem)
-                
-                data = data.filter(elementitem__in = elementitem)
-
-            if 'uom' in req:
-                uom = req["uom"]
-                uom = json.loads(uom)
-                
-                data = data.filter(uom__in = uom)
-
-
-            if 'flags' in req:
-                flags = req["flags"]
-                flags = json.loads(flags)
-                
-                data = data.filter(subdomain__in = flags)
-
+                if len(domain) != 0 :
+                    data = data.filter(domain__in = domain)
+            
             
             if 'domainelement' in req:
                 domainelement = req["domainelement"]
                 domainelement = json.loads(domainelement)
-                
-                data = data.filter(elements__in = domainelement)
+                if len(domainelement) != 0 :
+                    data = data.filter(domainelement__in = domainelement)
             
-            serializer = DataSerializer(data, context={'request': request}, many=True).data
+            if 'elementitem' in req:
+                elementitem = req["elementitem"]
+                elementitem = json.loads(elementitem)
+                if len(elementitem) != 0 :
+                    data = data.filter(elementitem__in = elementitem)
+                    
+            if 'itemspecify' in req:
+                itemspecify = req["itemspecify"]
+                itemspecify = json.loads(itemspecify)
+                if len(itemspecify) != 0 :
+                    data = data.filter(itemspecify__in = itemspecify)
+                    
+            if 'refperiod' in req:
+                refperiod = req["refperiod"]
+                refperiod = json.loads(refperiod)
+                
+                serialized_data  = DataSerializer(data, context={'request': request}, many=True).data
+                # print(json.dumps(serialized_data))
+                if len(refperiod) != 0 :
+                    #filter only data in specific years
+                    
+                    serialized_data = json.dumps(serialized_data)
+                    serialized_data = json.loads(serialized_data)
+                    
+                    
+                    data= filterDataRefPeriod(refperiod,serialized_data)
+                    
+                    # serializer = DataSerializer(data, context={'request': request}, many=True).data
+                    print(data)
+                    print(len(data))
+                    return Response(data)
+                    
+                    if len(data) == 2:
+                    
+                        return Response(data[0])
+                    else:
+                        return Response(data)
+                        
+                        
+                    # return Response(data)
+                    # data = data.filter(itemspecify__in = itemspecify)
+            
+            if 'uom' in req:
+                uom = req["uom"]
+                uom = json.loads(uom)  
+                data = data.filter(uom__in = uom)
 
+        # else:
+        #     county = request.GET["county"]
+            
+        #     county  = json.loads(county)
+            
+        #     data = data.filter(county__in=county)
+            
+        #     if 'subsector' in req:
+        #         sector = req["subsector"]
+        #         sector = json.loads(sector)
+        #         print(sector)
+        #         data = data.filter(subsector__in = sector)
+            
+        #     if 'domain' in req:
+        #         domain = req["domain"]
+        #         domain = json.loads(domain)
+        #         data = data.filter(domain__in = domain)
+
+        #     if 'elementitem' in req:
+        #         elementitem = req["elementitem"]
+        #         elementitem = json.loads(elementitem)
+                
+        #         data = data.filter(elementitem__in = elementitem)
+
+        #     if 'uom' in req:
+        #         uom = req["uom"]
+        #         uom = json.loads(uom)  
+        #         data = data.filter(uom__in = uom)
+
+
+        #     if 'flags' in req:
+        #         flags = req["flags"]
+        #         flags = json.loads(flags)
+                
+        #         data = data.filter(subdomain__in = flags)
+
+            
+        #     if 'domainelement' in req:
+        #         domainelement = req["domainelement"]
+        #         domainelement = json.loads(domainelement)
+                
+        #         data = data.filter(elements__in = domainelement)
+
+            
+
+            serializer = DataSerializer(data, context={'request': request}, many=True).data
+            # print(serializer)
             return Response(serializer)
             
 
