@@ -55,9 +55,9 @@ def data_list(request):
             
             if 'subsector' in req:
                 sector = req["subsector"]
-                sector = json.loads(subsector)
-                print(subsector)
-                data = data.filter(subsector__in = subsector)
+                sector = json.loads(sector)
+                print(sector)
+                data = data.filter(subsector__in = sector)
             
             if 'domain' in req:
                 domain = req["domain"]
