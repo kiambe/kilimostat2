@@ -23,3 +23,5 @@ urlpatterns = [
      re_path(r'^api/([0-9])$', views.data_detail),
     path(f'apputils/', apputils.as_view(), name="apputils"),
 ]
+
+

@@ -37,7 +37,7 @@ class DataEntryOfficer(models.Model):
 
 class County(models.Model):    
   id = models.AutoField(primary_key=True)
-  name = models.CharField(max_length=256, null=True) 
+  name = models.CharField(max_length=256, null=False, unique=True) 
   code = models.CharField(max_length=3, null=True) 
   def __str__(self):
         return str(self.name)
