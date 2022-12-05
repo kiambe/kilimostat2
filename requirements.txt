@@ -14,7 +14,7 @@ Markdown==3.4.1
 MarkupPy==1.14
 odfpy==1.4.1
 openpyxl==3.0.10
-psycopg2==2.9.5
+#psycopg2==2.9.5
 pytz==2022.6
 PyYAML==6.0
 requests==2.28.1
