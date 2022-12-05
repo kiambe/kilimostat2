@@ -19,3 +19,13 @@ def datadownload(request):
         
     }
     return HttpResponse(template.render(context, request))
+
+
+
+def covid19(request):
+    
+    template = loader.get_template('home/blog/covid19.html')
+    context = {
+        
+    }
+    return HttpResponse(template.render(context, request))
