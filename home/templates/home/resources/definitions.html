@@ -1,0 +1,316 @@
+{% extends "home/common/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<!-- Content Wrapper Start -->
+<div class="content-wrapper">
+
+ 
+
+   
+
+     <!-- FAQ Section start -->
+     <section class="faq-wrap pt-100 pb-75">
+        <div class="container">
+          <h2 style="color: green;">Difinitions and Standards</h2>
+            <div class="row gx-5">
+                <div class="col-lg-12">
+                    <h2>Please select a definition or standard</h2>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse1"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>
+                                        <i class="ri-arrow-down-s-line plus"></i>
+                                        <i class="ri-arrow-up-s-line minus"></i>
+                                    </span>
+                                    Abbreviations
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse "
+                                aria-labelledby="heading1" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+
+
+
+                                      <input type="text" id="abbreviationsInput" onkeyup="myFunction()" placeholder="Search">
+
+<table id="abbreviationsTable" class="table table-bordered table-hover">
+  <tr class="header">
+    <th >Abbreviation</th>
+    <th >Meaning</th>
+  </tr>
+  <tr>
+    <td>AFA</td>
+    <td>Agriculture and Food Authority</td>
+  </tr>
+  <tr>
+    <td>AU</td>
+    <td>African Union</td>
+  </tr>
+  <tr>
+    <td>FAO</td>
+    <td>Food and Agriculture Organization</td>
+  </tr>
+ 
+  <tr>
+    <td>MoALD</td>
+    <td>Ministry of Agriculture and Livestock Development</td>
+  </tr>
+  <tr>
+    <td>KALRO</td>
+    <td>Kenya Agricultural and Livestock Research Organization </td>
+  </tr>
+  
+  <tr>
+    <td>KNBS</td>
+    <td>The Kenya National Bureau of Statistics </td>
+  </tr>
+  <tr>
+    <td>UN</td>
+    <td>United Nations</td>
+  </tr>
+
+</table>
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("abbreviationsInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("abbreviationsTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+  </script>
+                                      
+
+
+
+
+
+                                       </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>
+                                        <i class="ri-arrow-down-s-line plus"></i>
+                                        <i class="ri-arrow-up-s-line minus"></i>
+                                    </span>
+                                    Subsectors
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse "
+                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <p>
+
+
+
+                                    <input type="text" id="subsectorsInput" onkeyup="myFunction()" placeholder="Search term">
+
+<table id="subsectorsTable" class="table table-bordered table-hover">
+<tr class="header">
+  <th >Term</th>
+  <th >Meaning</th>
+</tr>
+<tr>
+  <td>Crops</td>
+  <td>A cultivated plant that is grown on a large scale commercially, especially a cereal, fruit, or vegetable.</td>
+</tr>
+<tr>
+  <td>Livestock</td>
+  <td>The domesticated animals raised in an agricultural setting to provide labor and produce commodities </td>
+</tr>
+<tr>
+  <td>Fisheries</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>Investments and Financing</td>
+  <td></td>
+</tr>
+<tr>
+  <td>Lands, Inputs, Sustainability</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>Population and Employment</td>
+  <td> </td>
+</tr>
+<tr>
+  <td>Services</td>
+  <td> </td>
+</tr>
+
+</table>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("subsectorsInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("subsectorsTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+                                    
+
+
+
+
+
+                                     </p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    <span>
+                                        <i class="ri-arrow-down-s-line plus"></i>
+                                        <i class="ri-arrow-up-s-line minus"></i>
+                                    </span>
+                                    Domains
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse4"
+                                    aria-expanded="false" aria-controls="collapse4">
+                                    <span>
+                                        <i class="ri-arrow-down-s-line plus"></i>
+                                        <i class="ri-arrow-up-s-line minus"></i>
+                                    </span>
+                                    Domain Elements
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse"
+                                aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="heading5">
+                              <button class="accordion-button collapsed" type="button"
+                                  data-bs-toggle="collapse" data-bs-target="#collapse5"
+                                  aria-expanded="false" aria-controls="collapse5">
+                                  <span>
+                                      <i class="ri-arrow-down-s-line plus"></i>
+                                      <i class="ri-arrow-up-s-line minus"></i>
+                                  </span>
+                                  Element Items
+                              </button>
+                          </h2>
+                          <div id="collapse5" class="accordion-collapse collapse"
+                              aria-labelledby="heading5" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                  <p>&nbsp;</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading6">
+                            <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapse6"
+                                aria-expanded="false" aria-controls="collapse6">
+                                <span>
+                                    <i class="ri-arrow-down-s-line plus"></i>
+                                    <i class="ri-arrow-up-s-line minus"></i>
+                                </span>
+                                Item Specify
+                            </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse"
+                            aria-labelledby="heading6" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading7">
+                          <button class="accordion-button collapsed" type="button"
+                              data-bs-toggle="collapse" data-bs-target="#collapse7"
+                              aria-expanded="false" aria-controls="collapse7">
+                              <span>
+                                  <i class="ri-arrow-down-s-line plus"></i>
+                                  <i class="ri-arrow-up-s-line minus"></i>
+                              </span>
+                             Units
+                          </button>
+                      </h2>
+                      <div id="collapse7" class="accordion-collapse collapse"
+                          aria-labelledby="heading7" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <p>&nbsp;</p>
+                          </div>
+                      </div>
+                  </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section end -->
+
+
+</div>
+
+
+
+
+
+{% endblock %}  

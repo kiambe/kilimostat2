@@ -1,0 +1,909 @@
+{% extends "home/common/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<!-- Content Wrapper Start -->
+<div class="content-wrapper">
+
+ 
+
+   
+
+     <!-- FAQ Section start -->
+     <section class="faq-wrap pt-100 pb-75">
+        <div class="container">
+            <h2 style="color: green;">Agricultural Census</h2>
+            <div class="row gx-5">
+                <div class="col-lg-12">
+                    <h2>Please select indicator</h2>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse1"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>
+                                        <i class="ri-arrow-down-s-line plus"></i>
+                                        <i class="ri-arrow-up-s-line minus"></i>
+                                    </span>
+                                    Distribution of Farming Households by County, 2019
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse "
+                                aria-labelledby="heading1" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        <input type="text" id="ffhInput" onkeyup="myFunction()" placeholder="Search county">
+
+
+                                          <table class="table table-bordered table-hover" id="ffhTable">
+                                            <thead class="thead-dark">
+                                              <tr>
+                                                <td ><b><br></b></td>
+                                                <td   ><b> Total </b></td>
+                                                <td   ><b> Farming Households </b></td>
+                                                <td   ><b> Non Farming Households </b></td>
+                                                <td   ><b> % of farming Households </b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <thead class="thead-light">
+                                            <tr>
+                                                <td  ><b> Total </b></td>
+                                                <td  sdval="12040701" ><b> 12,040,701 </b></td>
+                                                <td   sdval="6360303" ><b> 6,360,303 </b></td>
+                                                <td   sdval="5680398" ><b> 5,680,398 </b></td>
+                                                <td   sdval="52.8233613640933" ><b> 52.8 </b></td>
+                                            </tr>
+                                        </thead>
+                                            <tr>
+                                                <td  > Kakamega </td>
+                                                <td  sdval="432191" > 432,191 </td>
+                                                <td   sdval="334835" > 334,835 </td>
+                                                <td   sdval="97356" > 97,356 </td>
+                                                <td   sdval="77.4738483679669" > 77.5 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Nakuru </td>
+                                                <td  sdval="598156" > 598,156 </td>
+                                                <td   sdval="284495" > 284,495 </td>
+                                                <td   sdval="313661" > 313,661 </td>
+                                                <td   sdval="47.5620072355707" > 47.6 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Bungoma </td>
+                                                <td  sdval="357687" > 357,687 </td>
+                                                <td   sdval="280086" > 280,086 </td>
+                                                <td   sdval="77601" > 77,601 </td>
+                                                <td   sdval="78.3047748450461" > 78.3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Meru </td>
+                                                <td  sdval="423848" > 423,848 </td>
+                                                <td   sdval="274081" > 274,081 </td>
+                                                <td   sdval="149767" > 149,767 </td>
+                                                <td   sdval="64.6649270493196" > 64.7 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Machakos </td>
+                                                <td  sdval="399453" > 399,453 </td>
+                                                <td   sdval="231177" > 231,177 </td>
+                                                <td   sdval="168276" > 168,276 </td>
+                                                <td   sdval="57.8733918633732" > 57.9 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Murang'a </td>
+                                                <td  sdval="317459" > 317,459 </td>
+                                                <td   sdval="231171" > 231,171 </td>
+                                                <td   sdval="86288" > 86,288 </td>
+                                                <td   sdval="72.8191671995439" > 72.8 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Kisii </td>
+                                                <td  sdval="307224" > 307,224 </td>
+                                                <td   sdval="219479" > 219,479 </td>
+                                                <td   sdval="87745" > 87,745 </td>
+                                                <td   sdval="71.4394057755905" > 71.4 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Kitui </td>
+                                                <td  sdval="261787" > 261,787 </td>
+                                                <td   sdval="215003" > 215,003 </td>
+                                                <td   sdval="46784" > 46,784 </td>
+                                                <td   sdval="82.1289827225951" > 82.1 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Kiambu </td>
+                                                <td  sdval="792147" > 792,147 </td>
+                                                <td   sdval="213544" > 213,544 </td>
+                                                <td   sdval="578603" > 578,603 </td>
+                                                <td   sdval="26.9576227644616" > 27.0 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Homabay </td>
+                                                <td  sdval="260262" > 260,262 </td>
+                                                <td   sdval="199693" > 199,693 </td>
+                                                <td   sdval="60569" > 60,569 </td>
+                                                <td   sdval="76.7276821049558" > 76.7 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Siaya </td>
+                                                <td  sdval="249279" > 249,279 </td>
+                                                <td   sdval="197783" > 197,783 </td>
+                                                <td   sdval="51496" > 51,496 </td>
+                                                <td   sdval="79.3420223925802" > 79.3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Makueni </td>
+                                                <td  sdval="243948" > 243,948 </td>
+                                                <td   sdval="193384" > 193,384 </td>
+                                                <td   sdval="50564" > 50,564 </td>
+                                                <td   sdval="79.2726318723662" > 79.3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Narok </td>
+                                                <td  sdval="238071" > 238,071 </td>
+                                                <td   sdval="181080" > 181,080 </td>
+                                                <td   sdval="56991" > 56,991 </td>
+                                                <td   sdval="76.061343044722" > 76.1 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Migori </td>
+                                                <td  sdval="238078" > 238,078 </td>
+                                                <td   sdval="172024" > 172,024 </td>
+                                                <td   sdval="66054" > 66,054 </td>
+                                                <td   sdval="72.255311284537" > 72.3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Nyeri </td>
+                                                <td  sdval="244542" > 244,542 </td>
+                                                <td   sdval="164077" > 164,077 </td>
+                                                <td   sdval="80465" > 80,465 </td>
+                                                <td   sdval="67.0956318342044" > 67.1 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Kilifi </td>
+                                                <td  sdval="297935" > 297,935 </td>
+                                                <td   sdval="162648" > 162,648 </td>
+                                                <td   sdval="135287" > 135,287 </td>
+                                                <td   sdval="54.5917733733868" > 54.6 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Bomet </td>
+                                                <td  sdval="187217" > 187,217 </td>
+                                                <td   sdval="152384" > 152,384 </td>
+                                                <td   sdval="34833" > 34,833 </td>
+                                                <td   sdval="81.3943178237019" > 81.4 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Kericho </td>
+                                                <td  sdval="205890" > 205,890 </td>
+                                                <td   sdval="150625" > 150,625 </td>
+                                                <td   sdval="55265" > 55,265 </td>
+                                                <td   sdval="73.1579969886833" > 73.2 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Busia </td>
+                                                <td  sdval="197921" > 197,921 </td>
+                                                <td   sdval="149675" > 149,675 </td>
+                                                <td   sdval="48246" > 48,246 </td>
+                                                <td   sdval="75.6236073989117" > 75.6 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Nandi </td>
+                                                <td  sdval="199024" > 199,024 </td>
+                                                <td   sdval="148660" > 148,660 </td>
+                                                <td   sdval="50364" > 50,364 </td>
+                                                <td   sdval="74.69450920492" > 74.7 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Kisumu </td>
+                                                <td  sdval="296766" > 296,766 </td>
+                                                <td   sdval="147790" > 147,790 </td>
+                                                <td   sdval="148976" > 148,976 </td>
+                                                <td   sdval="49.8001792658189" > 49.8 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  height="37" > Uasin Gishu </td>
+                                                <td  sdval="301065" > 301,065 </td>
+                                                <td   sdval="141313" > 141,313 </td>
+                                                <td   sdval="159752" > 159,752 </td>
+                                                <td   sdval="46.9377044824207" > 46.9 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  height="37" > Nyandarua </td>
+                                                <td  sdval="178205" > 178,205 </td>
+                                                <td   sdval="140759" > 140,759 </td>
+                                                <td   sdval="37446" > 37,446 </td>
+                                                <td   sdval="78.9871215734688" > 79.0 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  height="37" > Trans Nzoia </td>
+                                                <td  sdval="222967" > 222,967 </td>
+                                                <td   sdval="139981" > 139,981 </td>
+                                                <td   sdval="82986" > 82,986 </td>
+                                                <td   sdval="62.7810393466298" > 62.8 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Kirinyaga </td>
+                                                <td  sdval="203554" > 203,554 </td>
+                                                <td   sdval="139850" > 139,850 </td>
+                                                <td   sdval="63704" > 63,704 </td>
+                                                <td   sdval="68.7041276516305" > 68.7 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Embu </td>
+                                                <td  sdval="182413" > 182,413 </td>
+                                                <td   sdval="130925" > 130,925 </td>
+                                                <td   sdval="51488" > 51,488 </td>
+                                                <td   sdval="71.7739415502185" > 71.8 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Vihiga </td>
+                                                <td  sdval="143265" > 143,265 </td>
+                                                <td   sdval="113645" > 113,645 </td>
+                                                <td   sdval="29620" > 29,620 </td>
+                                                <td   sdval="79.3250270477786" > 79.3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Nyamira </td>
+                                                <td  sdval="150489" > 150,489 </td>
+                                                <td   sdval="109790" > 109,790 </td>
+                                                <td   sdval="40699" > 40,699 </td>
+                                                <td   sdval="72.9554984085216" > 73.0 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Kwale </td>
+                                                <td  sdval="172767" > 172,767 </td>
+                                                <td   sdval="109040" > 109,040 </td>
+                                                <td   sdval="63727" > 63,727 </td>
+                                                <td   sdval="63.113904854515" > 63.1 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Baringo </td>
+                                                <td  sdval="141867" > 141,867 </td>
+                                                <td   sdval="100242" > 100,242 </td>
+                                                <td   sdval="41625" > 41,625 </td>
+                                                <td   sdval="70.6591384888663" > 70.7 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Kajiado </td>
+                                                <td  sdval="313130" > 313,130 </td>
+                                                <td   sdval="96177" > 96,177 </td>
+                                                <td   sdval="216953" > 216,953 </td>
+                                                <td   sdval="30.7147191262415" > 30.7 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Laikipia </td>
+                                                <td  sdval="145764" > 145,764 </td>
+                                                <td   sdval="90457" > 90,457 </td>
+                                                <td   sdval="55307" > 55,307 </td>
+                                                <td   sdval="62.0571608902061" > 62.1 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  height="37" > West Pokot </td>
+                                                <td  sdval="115738" > 115,738 </td>
+                                                <td   sdval="89569" > 89,569 </td>
+                                                <td   sdval="26169" > 26,169 </td>
+                                                <td   sdval="77.3894485821424" > 77.4 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  height="37" > Tharaka-Nithi </td>
+                                                <td  sdval="109425" > 109,425 </td>
+                                                <td   sdval="85676" > 85,676 </td>
+                                                <td   sdval="23749" > 23,749 </td>
+                                                <td   sdval="78.2965501485035" > 78.3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  height="37" > Elgeyo-Marakwet </td>
+                                                <td  sdval="99104" > 99,104 </td>
+                                                <td   sdval="74709" > 74,709 </td>
+                                                <td   sdval="24395" > 24,395 </td>
+                                                <td   sdval="75.3844446238295" > 75.4 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Turkana </td>
+                                                <td  sdval="162567" > 162,567 </td>
+                                                <td   sdval="62469" > 62,469 </td>
+                                                <td   sdval="100098" > 100,098 </td>
+                                                <td   sdval="38.4266179482921" > 38.4 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Wajir </td>
+                                                <td  sdval="126874" > 126,874 </td>
+                                                <td   sdval="61959" > 61,959 </td>
+                                                <td   sdval="64915" > 64,915 </td>
+                                                <td   sdval="48.8350647098696" > 48.8 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Mandera </td>
+                                                <td  sdval="123935" > 123,935 </td>
+                                                <td   sdval="61583" > 61,583 </td>
+                                                <td   sdval="62352" > 62,352 </td>
+                                                <td   sdval="49.6897567273167" > 49.7 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  height="37" > Taita-Taveta </td>
+                                                <td  sdval="94453" > 94,453 </td>
+                                                <td   sdval="56881" > 56,881 </td>
+                                                <td   sdval="37572" > 37,572 </td>
+                                                <td   sdval="60.2214858183435" > 60.2 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Garissa </td>
+                                                <td  sdval="138917" > 138,917 </td>
+                                                <td   sdval="46109" > 46,109 </td>
+                                                <td   sdval="92808" > 92,808 </td>
+                                                <td   sdval="33.1917619873738" > 33.2 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Samburu </td>
+                                                <td  sdval="63947" > 63,947 </td>
+                                                <td   sdval="42738" > 42,738 </td>
+                                                <td   sdval="21209" > 21,209 </td>
+                                                <td   sdval="66.8334714685599" > 66.8 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Marsabit </td>
+                                                <td  sdval="76669" > 76,669 </td>
+                                                <td   sdval="38811" > 38,811 </td>
+                                                <td   sdval="37858" > 37,858 </td>
+                                                <td   sdval="50.6215028238271" > 50.6 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  height="37" > Tana River </td>
+                                                <td  sdval="66964" > 66,964 </td>
+                                                <td   sdval="34989" > 34,989 </td>
+                                                <td   sdval="31975" > 31,975 </td>
+                                                <td   sdval="52.2504629353085" > 52.3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  height="37" > Nairobi City </td>
+                                                <td  sdval="1494096" > 1,494,096 </td>
+                                                <td   sdval="31516" > 31,516 </td>
+                                                <td   sdval="1462580" > 1,462,580 </td>
+                                                <td   sdval="2.10936914361594" > 2.1 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Isiolo </td>
+                                                <td  sdval="53206" > 53,206 </td>
+                                                <td   sdval="23996" > 23,996 </td>
+                                                <td   sdval="29210" > 29,210 </td>
+                                                <td   sdval="45.1001766718039" > 45.1 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Lamu </td>
+                                                <td  sdval="34223" > 34,223 </td>
+                                                <td   sdval="20254" > 20,254 </td>
+                                                <td   sdval="13969" > 13,969 </td>
+                                                <td   sdval="59.1824211787394" > 59.2 </td>
+                                            </tr>
+                                            <tr>
+                                                <td  > Mombasa </td>
+                                                <td  sdval="376212" > 376,212 </td>
+                                                <td   sdval="13171" > 13,171 </td>
+                                                <td   sdval="363041" > 363,041 </td>
+                                                <td   sdval="3.50095159112415" > 3.5 </td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+
+
+                                        <script>
+                                            function myFunction() {
+                                              // Declare variables
+                                              var input, filter, table, tr, td, i, txtValue;
+                                              input = document.getElementById("ffhInput");
+                                              filter = input.value.toUpperCase();
+                                              table = document.getElementById("ffhTable");
+                                              tr = table.getElementsByTagName("tr");
+                                            
+                                              // Loop through all table rows, and hide those who don't match the search query
+                                              for (i = 0; i < tr.length; i++) {
+                                                td = tr[i].getElementsByTagName("td")[0];
+                                                if (td) {
+                                                  txtValue = td.textContent || td.innerText;
+                                                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                                    tr[i].style.display = "";
+                                                  } else {
+                                                    tr[i].style.display = "none";
+                                                  }
+                                                }
+                                              }
+                                            }
+                                            </script>
+                                                                                
+                                          
+
+
+
+
+
+
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>
+                                        <i class="ri-arrow-down-s-line plus"></i>
+                                        <i class="ri-arrow-up-s-line minus"></i>
+                                    </span>
+                                    Distribution of Farming Households by Sub-sector and County
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse "
+                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+
+
+                                        <table class="table table-bordered table-hover">
+                                            <thead class="thead-dark">
+                                              <tr >
+                                                <td >County</td>
+                                                <td >Farming Households</td>
+                                                <td >Crop Farming Households</td>
+                                                <td >Livestock Farming Households</td>
+                                                <td >Aquaculture Households</td>
+                                                <td >Fishing Households</td>
+                                              </tr>
+                                              </thead>
+                                              <thead class="thead-light"></thead>
+                                              <tr >
+                                                <td >Total</td>
+                                                <td >&nbsp;&nbsp;6,360,303 </td>
+                                                <td >&nbsp;&nbsp;5,555,334 </td>
+                                                <td >&nbsp;&nbsp;4,610,546 </td>
+                                                <td >&nbsp;&nbsp;23,519 </td>
+                                                <td>&nbsp;&nbsp;108,943 </td>
+                                              </tr>
+                                            </thead>
+                                              <tbody></tbody>
+                                              <tr class="row2">
+                                                <td >Mombasa</td>
+                                                <td >&nbsp;&nbsp;13,171 </td>
+                                                <td >&nbsp;&nbsp;7,207 </td>
+                                                <td >&nbsp;&nbsp;8,225 </td>
+                                                <td >&nbsp;&nbsp;93 </td>
+                                                <td>&nbsp;&nbsp;1,409 </td>
+                                              </tr>
+                                              <tr class="row3">
+                                                <td >Kwale</td>
+                                                <td >&nbsp;&nbsp;109,040 </td>
+                                                <td >&nbsp;&nbsp;100,010 </td>
+                                                <td >&nbsp;&nbsp;70,211 </td>
+                                                <td >&nbsp;&nbsp;212 </td>
+                                                <td>&nbsp;&nbsp;4,452 </td>
+                                              </tr>
+                                              <tr class="row4">
+                                                <td >Kilifi</td>
+                                                <td >&nbsp;&nbsp;162,648 </td>
+                                                <td >&nbsp;&nbsp;149,324 </td>
+                                                <td >&nbsp;&nbsp;97,900 </td>
+                                                <td >&nbsp;&nbsp;360 </td>
+                                                <td>&nbsp;&nbsp;6,393 </td>
+                                              </tr>
+                                              <tr class="row5">
+                                                <td >Tana River</td>
+                                                <td >&nbsp;&nbsp;34,989 </td>
+                                                <td >&nbsp;&nbsp;16,716 </td>
+                                                <td >&nbsp;&nbsp;26,182 </td>
+                                                <td >&nbsp;&nbsp;207 </td>
+                                                <td>&nbsp;&nbsp;2,136 </td>
+                                              </tr>
+                                              <tr class="row6">
+                                                <td >Lamu</td>
+                                                <td >&nbsp;&nbsp;20,254 </td>
+                                                <td >&nbsp;&nbsp;15,195 </td>
+                                                <td >&nbsp;&nbsp;13,144 </td>
+                                                <td >&nbsp;&nbsp;63 </td>
+                                                <td>&nbsp;&nbsp;3,162 </td>
+                                              </tr>
+                                              <tr class="row7">
+                                                <td >Taita-Taveta</td>
+                                                <td >&nbsp;&nbsp;56,881 </td>
+                                                <td >&nbsp;&nbsp;48,379 </td>
+                                                <td >&nbsp;&nbsp;42,711 </td>
+                                                <td >&nbsp;&nbsp;270 </td>
+                                                <td>&nbsp;&nbsp;670 </td>
+                                              </tr>
+                                              <tr class="row8">
+                                                <td >Garissa</td>
+                                                <td >&nbsp;&nbsp;46,109 </td>
+                                                <td >&nbsp;&nbsp;4,372 </td>
+                                                <td >&nbsp;&nbsp;44,326 </td>
+                                                <td >0</td>
+                                                <td>&nbsp;&nbsp;1,411 </td>
+                                              </tr>
+                                              <tr class="row9">
+                                                <td >Wajir</td>
+                                                <td >&nbsp;&nbsp;61,959 </td>
+                                                <td >&nbsp;&nbsp;2,461 </td>
+                                                <td >&nbsp;&nbsp;61,122 </td>
+                                                <td >0</td>
+                                                <td>&nbsp;&nbsp;912 </td>
+                                              </tr>
+                                              <tr class="row10">
+                                                <td >Mandera</td>
+                                                <td >&nbsp;&nbsp;61,583 </td>
+                                                <td >&nbsp;&nbsp;15,258 </td>
+                                                <td >&nbsp;&nbsp;59,039 </td>
+                                                <td >0</td>
+                                                <td>&nbsp;&nbsp;1,083 </td>
+                                              </tr>
+                                              <tr class="row11">
+                                                <td >Marsabit</td>
+                                                <td >&nbsp;&nbsp;38,811 </td>
+                                                <td >&nbsp;&nbsp;2,644 </td>
+                                                <td >&nbsp;&nbsp;37,449 </td>
+                                                <td >&nbsp;&nbsp;143 </td>
+                                                <td>&nbsp;&nbsp;1,295 </td>
+                                              </tr>
+                                              <tr class="row12">
+                                                <td >Isiolo</td>
+                                                <td >&nbsp;&nbsp;23,996 </td>
+                                                <td >&nbsp;&nbsp;2,776 </td>
+                                                <td >&nbsp;&nbsp;22,994 </td>
+                                                <td >&nbsp;&nbsp;77 </td>
+                                                <td>&nbsp;&nbsp;209 </td>
+                                              </tr>
+                                              <tr class="row13">
+                                                <td >Meru</td>
+                                                <td >&nbsp;&nbsp;274,081 </td>
+                                                <td >&nbsp;&nbsp;250,462 </td>
+                                                <td >&nbsp;&nbsp;194,618 </td>
+                                                <td >&nbsp;&nbsp;1,051 </td>
+                                                <td>&nbsp;&nbsp;1,666 </td>
+                                              </tr>
+                                              <tr class="row14">
+                                                <td >Tharaka-Nithi</td>
+                                                <td >&nbsp;&nbsp;85,676 </td>
+                                                <td >&nbsp;&nbsp;79,222 </td>
+                                                <td >&nbsp;&nbsp;66,634 </td>
+                                                <td >&nbsp;&nbsp;300 </td>
+                                                <td>&nbsp;&nbsp;786 </td>
+                                              </tr>
+                                              <tr class="row15">
+                                                <td >Embu</td>
+                                                <td >&nbsp;&nbsp;130,925 </td>
+                                                <td >&nbsp;&nbsp;123,261 </td>
+                                                <td >&nbsp;&nbsp;96,507 </td>
+                                                <td >&nbsp;&nbsp;570 </td>
+                                                <td>&nbsp;&nbsp;1,633 </td>
+                                              </tr>
+                                              <tr class="row16">
+                                                <td >Kitui</td>
+                                                <td >&nbsp;&nbsp;215,003 </td>
+                                                <td >&nbsp;&nbsp;199,438 </td>
+                                                <td >&nbsp;&nbsp;173,988 </td>
+                                                <td >&nbsp;&nbsp;516 </td>
+                                                <td>&nbsp;&nbsp;863 </td>
+                                              </tr>
+                                              <tr class="row17">
+                                                <td >Machakos</td>
+                                                <td >&nbsp;&nbsp;231,177 </td>
+                                                <td >&nbsp;&nbsp;217,054 </td>
+                                                <td >&nbsp;&nbsp;173,454 </td>
+                                                <td >&nbsp;&nbsp;532 </td>
+                                                <td>&nbsp;&nbsp;1,834 </td>
+                                              </tr>
+                                              <tr class="row18">
+                                                <td >Makueni</td>
+                                                <td >&nbsp;&nbsp;193,384 </td>
+                                                <td >&nbsp;&nbsp;180,634 </td>
+                                                <td >&nbsp;&nbsp;155,868 </td>
+                                                <td >&nbsp;&nbsp;364 </td>
+                                                <td>&nbsp;&nbsp;908 </td>
+                                              </tr>
+                                              <tr class="row19">
+                                                <td >Nyandarua</td>
+                                                <td >&nbsp;&nbsp;140,759 </td>
+                                                <td >&nbsp;&nbsp;135,142 </td>
+                                                <td >&nbsp;&nbsp;108,771 </td>
+                                                <td >&nbsp;&nbsp;242 </td>
+                                                <td>&nbsp;&nbsp;603 </td>
+                                              </tr>
+                                              <tr class="row20">
+                                                <td >Nyeri</td>
+                                                <td >&nbsp;&nbsp;164,077 </td>
+                                                <td >&nbsp;&nbsp;154,413 </td>
+                                                <td >&nbsp;&nbsp;120,796 </td>
+                                                <td >&nbsp;&nbsp;746 </td>
+                                                <td>&nbsp;&nbsp;1,264 </td>
+                                              </tr>
+                                              <tr class="row21">
+                                                <td >Kirinyaga</td>
+                                                <td >&nbsp;&nbsp;139,850 </td>
+                                                <td >&nbsp;&nbsp;130,573 </td>
+                                                <td >&nbsp;&nbsp;95,430 </td>
+                                                <td >&nbsp;&nbsp;620 </td>
+                                                <td>&nbsp;&nbsp;1,796 </td>
+                                              </tr>
+                                              <tr class="row22">
+                                                <td >Murang'a</td>
+                                                <td >&nbsp;&nbsp;231,171 </td>
+                                                <td >&nbsp;&nbsp;219,962 </td>
+                                                <td >&nbsp;&nbsp;171,120 </td>
+                                                <td >&nbsp;&nbsp;443 </td>
+                                                <td>&nbsp;&nbsp;1,345 </td>
+                                              </tr>
+                                              <tr class="row23">
+                                                <td >Kiambu</td>
+                                                <td >&nbsp;&nbsp;213,544 </td>
+                                                <td >&nbsp;&nbsp;177,393 </td>
+                                                <td >&nbsp;&nbsp;143,381 </td>
+                                                <td >&nbsp;&nbsp;402 </td>
+                                                <td>&nbsp;&nbsp;1,317 </td>
+                                              </tr>
+                                              <tr class="row24">
+                                                <td >Turkana</td>
+                                                <td >&nbsp;&nbsp;62,469 </td>
+                                                <td >&nbsp;&nbsp;14,198 </td>
+                                                <td >&nbsp;&nbsp;54,756 </td>
+                                                <td >&nbsp;&nbsp;372 </td>
+                                                <td>&nbsp;&nbsp;4,522 </td>
+                                              </tr>
+                                              <tr class="row25">
+                                                <td >West Pokot</td>
+                                                <td >&nbsp;&nbsp;89,569 </td>
+                                                <td >&nbsp;&nbsp;80,170 </td>
+                                                <td >&nbsp;&nbsp;76,301 </td>
+                                                <td >&nbsp;&nbsp;550 </td>
+                                                <td>&nbsp;&nbsp;397 </td>
+                                              </tr>
+                                              <tr class="row26">
+                                                <td >Samburu</td>
+                                                <td >&nbsp;&nbsp;42,738 </td>
+                                                <td >&nbsp;&nbsp;13,806 </td>
+                                                <td >&nbsp;&nbsp;40,346 </td>
+                                                <td >&nbsp;&nbsp;158 </td>
+                                                <td>&nbsp;&nbsp;278 </td>
+                                              </tr>
+                                              <tr class="row27">
+                                                <td >Trans Nzoia</td>
+                                                <td >&nbsp;&nbsp;139,981 </td>
+                                                <td >&nbsp;&nbsp;129,934 </td>
+                                                <td >&nbsp;&nbsp;94,352 </td>
+                                                <td >&nbsp;&nbsp;686 </td>
+                                                <td>&nbsp;&nbsp;770 </td>
+                                              </tr>
+                                              <tr class="row28">
+                                                <td >Uasin Gishu</td>
+                                                <td >&nbsp;&nbsp;141,313 </td>
+                                                <td >&nbsp;&nbsp;132,000 </td>
+                                                <td >&nbsp;&nbsp;102,129 </td>
+                                                <td >&nbsp;&nbsp;501 </td>
+                                                <td>&nbsp;&nbsp;708 </td>
+                                              </tr>
+                                              <tr class="row29">
+                                                <td >Elgeyo-Marakwet</td>
+                                                <td >&nbsp;&nbsp;74,709 </td>
+                                                <td >&nbsp;&nbsp;71,077 </td>
+                                                <td >&nbsp;&nbsp;52,309 </td>
+                                                <td >&nbsp;&nbsp;272 </td>
+                                                <td>&nbsp;&nbsp;340 </td>
+                                              </tr>
+                                              <tr class="row30">
+                                                <td >Nandi</td>
+                                                <td >&nbsp;&nbsp;148,660 </td>
+                                                <td >&nbsp;&nbsp;143,009 </td>
+                                                <td >&nbsp;&nbsp;108,133 </td>
+                                                <td >&nbsp;&nbsp;803 </td>
+                                                <td>&nbsp;&nbsp;1,034 </td>
+                                              </tr>
+                                              <tr class="row31">
+                                                <td >Baringo</td>
+                                                <td >&nbsp;&nbsp;100,242 </td>
+                                                <td >&nbsp;&nbsp;84,420 </td>
+                                                <td >&nbsp;&nbsp;78,563 </td>
+                                                <td >&nbsp;&nbsp;500 </td>
+                                                <td>&nbsp;&nbsp;841 </td>
+                                              </tr>
+                                              <tr class="row32">
+                                                <td >Laikipia</td>
+                                                <td >&nbsp;&nbsp;90,457 </td>
+                                                <td >&nbsp;&nbsp;74,332 </td>
+                                                <td >&nbsp;&nbsp;67,230 </td>
+                                                <td >&nbsp;&nbsp;366 </td>
+                                                <td>&nbsp;&nbsp;483 </td>
+                                              </tr>
+                                              <tr class="row33">
+                                                <td >Nakuru</td>
+                                                <td >&nbsp;&nbsp;284,495 </td>
+                                                <td >&nbsp;&nbsp;260,984 </td>
+                                                <td >&nbsp;&nbsp;187,282 </td>
+                                                <td >&nbsp;&nbsp;538 </td>
+                                                <td>&nbsp;&nbsp;2,494 </td>
+                                              </tr>
+                                              <tr class="row34">
+                                                <td >Narok</td>
+                                                <td >&nbsp;&nbsp;181,080 </td>
+                                                <td >&nbsp;&nbsp;150,406 </td>
+                                                <td >&nbsp;&nbsp;147,298 </td>
+                                                <td >&nbsp;&nbsp;668 </td>
+                                                <td>&nbsp;&nbsp;848 </td>
+                                              </tr>
+                                              <tr class="row35">
+                                                <td >Kajiado</td>
+                                                <td >&nbsp;&nbsp;96,177 </td>
+                                                <td >&nbsp;&nbsp;45,924 </td>
+                                                <td >&nbsp;&nbsp;79,629 </td>
+                                                <td >&nbsp;&nbsp;414 </td>
+                                                <td>&nbsp;&nbsp;657 </td>
+                                              </tr>
+                                              <tr class="row36">
+                                                <td >Kericho</td>
+                                                <td >&nbsp;&nbsp;150,625 </td>
+                                                <td >&nbsp;&nbsp;145,842 </td>
+                                                <td >&nbsp;&nbsp;109,297 </td>
+                                                <td >&nbsp;&nbsp;417 </td>
+                                                <td>&nbsp;&nbsp;686 </td>
+                                              </tr>
+                                              <tr class="row37">
+                                                <td >Bomet</td>
+                                                <td >&nbsp;&nbsp;152,384 </td>
+                                                <td >&nbsp;&nbsp;146,323 </td>
+                                                <td >&nbsp;&nbsp;124,306 </td>
+                                                <td >&nbsp;&nbsp;367 </td>
+                                                <td>&nbsp;&nbsp;866 </td>
+                                              </tr>
+                                              <tr class="row38">
+                                                <td >Kakamega</td>
+                                                <td >&nbsp;&nbsp;334,835 </td>
+                                                <td >&nbsp;&nbsp;321,923 </td>
+                                                <td >&nbsp;&nbsp;228,477 </td>
+                                                <td >&nbsp;&nbsp;2,178 </td>
+                                                <td>&nbsp;&nbsp;3,184 </td>
+                                              </tr>
+                                              <tr class="row39">
+                                                <td >Vihiga</td>
+                                                <td >&nbsp;&nbsp;113,645 </td>
+                                                <td >&nbsp;&nbsp;108,520 </td>
+                                                <td >&nbsp;&nbsp;82,522 </td>
+                                                <td >&nbsp;&nbsp;483 </td>
+                                                <td>&nbsp;&nbsp;625 </td>
+                                              </tr>
+                                              <tr class="row40">
+                                                <td >Bungoma</td>
+                                                <td >&nbsp;&nbsp;280,086 </td>
+                                                <td >&nbsp;&nbsp;269,960 </td>
+                                                <td >&nbsp;&nbsp;190,490 </td>
+                                                <td >&nbsp;&nbsp;1,507 </td>
+                                                <td>&nbsp;&nbsp;1,944 </td>
+                                              </tr>
+                                              <tr class="row41">
+                                                <td >Busia</td>
+                                                <td >&nbsp;&nbsp;149,675 </td>
+                                                <td >&nbsp;&nbsp;140,666 </td>
+                                                <td >&nbsp;&nbsp;102,412 </td>
+                                                <td >&nbsp;&nbsp;527 </td>
+                                                <td>&nbsp;&nbsp;6,139 </td>
+                                              </tr>
+                                              <tr class="row42">
+                                                <td >Siaya</td>
+                                                <td >&nbsp;&nbsp;197,783 </td>
+                                                <td >&nbsp;&nbsp;184,955 </td>
+                                                <td >&nbsp;&nbsp;127,031 </td>
+                                                <td >&nbsp;&nbsp;797 </td>
+                                                <td>&nbsp;&nbsp;12,741 </td>
+                                              </tr>
+                                              <tr class="row43">
+                                                <td >Kisumu</td>
+                                                <td >&nbsp;&nbsp;147,790 </td>
+                                                <td >&nbsp;&nbsp;133,378 </td>
+                                                <td >&nbsp;&nbsp;97,214 </td>
+                                                <td >&nbsp;&nbsp;768 </td>
+                                                <td>&nbsp;&nbsp;6,084 </td>
+                                              </tr>
+                                              <tr class="row44">
+                                                <td >Homabay</td>
+                                                <td >&nbsp;&nbsp;199,693 </td>
+                                                <td >&nbsp;&nbsp;184,359 </td>
+                                                <td >&nbsp;&nbsp;124,763 </td>
+                                                <td >&nbsp;&nbsp;1,042 </td>
+                                                <td>&nbsp;&nbsp;17,770 </td>
+                                              </tr>
+                                              <tr class="row45">
+                                                <td >Migori</td>
+                                                <td >&nbsp;&nbsp;172,024 </td>
+                                                <td >&nbsp;&nbsp;160,694 </td>
+                                                <td >&nbsp;&nbsp;109,824 </td>
+                                                <td >&nbsp;&nbsp;895 </td>
+                                                <td>&nbsp;&nbsp;6,807 </td>
+                                              </tr>
+                                              <tr class="row46">
+                                                <td >Kisii</td>
+                                                <td >&nbsp;&nbsp;219,479 </td>
+                                                <td >&nbsp;&nbsp;207,387 </td>
+                                                <td >&nbsp;&nbsp;143,867 </td>
+                                                <td >&nbsp;&nbsp;798 </td>
+                                                <td>&nbsp;&nbsp;1,069 </td>
+                                              </tr>
+                                              <tr class="row47">
+                                                <td >Nyamira</td>
+                                                <td >&nbsp;&nbsp;109,790 </td>
+                                                <td >&nbsp;&nbsp;102,848 </td>
+                                                <td >&nbsp;&nbsp;76,531 </td>
+                                                <td >&nbsp;&nbsp;457 </td>
+                                                <td>&nbsp;&nbsp;509 </td>
+                                              </tr>
+                                              <tr class="row48">
+                                                <td >Nairobi City</td>
+                                                <td >&nbsp;&nbsp;31,516 </td>
+                                                <td >&nbsp;&nbsp;16,323 </td>
+                                                <td >&nbsp;&nbsp;21,614 </td>
+                                                <td >&nbsp;&nbsp;244 </td>
+                                                <td>0</td>
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                        
+
+
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    <span>
+                                        <i class="ri-arrow-down-s-line plus"></i>
+                                        <i class="ri-arrow-up-s-line minus"></i>
+                                    </span>
+                                    Distribution of Farming Households by Sub-sector and County (Mutually Exclusive Activities)
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse4"
+                                    aria-expanded="false" aria-controls="collapse4">
+                                    <span>
+                                        <i class="ri-arrow-down-s-line plus"></i>
+                                        <i class="ri-arrow-up-s-line minus"></i>
+                                    </span>
+                                    Distribution of Farming Households by Main Purpose of Production and County
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse"
+                                aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section end -->
+
+
+</div>
+
+
+
+
+
+{% endblock %}  
