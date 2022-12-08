@@ -1,228 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+
     <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Link of CSS files -->
-        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/remixicon.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/owl-theme-default-min.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/odometer.min.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/fancybox.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/dark-theme.css' %}">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>KilimoSTAT</title>
-        <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
-    </head>
 
-    <body>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <!--Preloader starts-->
-        <div class="loader js-preloader">
-            <div></div>
-            <div></div>
-            <div></div>
+        <meta name="description" content="KilimoSTAT - Agriculture Statistics for Improved Decision Making and Enhacing Food  Security" />
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon; charset=binary" />
+        <link rel="icon" href="assets/img/favicon.png" type="image/x-icon; charset=binary" />
+
+        
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/bootstrap-table.min.css" />
+        <link rel="stylesheet" href="assets/css/style.min.css" />
+        <link rel="stylesheet" href="assets/css/select2.css" />
+        <link rel="stylesheet" href="assets/css/jquery-ui.custom.min.css" />
+        <link rel="stylesheet" href="assets/css/outdatedbrowser.min.css" />
+        <link rel="stylesheet" href="assets/css/normalize.css" />
+        <link rel="stylesheet" href="assets/css/ion.rangeSlider.css" />
+        <link rel="stylesheet" href="assets/css/ion.rangeSlider.skinHTML5.css" />
+        <link rel="stylesheet" href="assets/css/swiper.min.css" />
+        <link rel="stylesheet" href="assets/css/nprogress.css" />
+        <link rel="stylesheet" href="assets/css/toastr.min.css" />
+        <link rel="stylesheet" href="assets/css/jbPivot.css" />
+        <link rel="stylesheet" href="assets/css/leaflet.css" />
+        <link rel="stylesheet" href="assets/css/waves.min.css" />
+        <link rel="stylesheet" href="assets/css/introjs.min.css" />
+        <link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/fixedColumns.bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/fenix-ui-map.min.css" />
+
+        <link rel="stylesheet" href="assets/css/index.min.css" />
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+    <body class="en">
+        <div id="outdated">
+            <h6>Oh no your browser is out of date!</h6>
+            <p>Update your browser to view this website correctly.</p>
+            <br />
+            <p>
+                <img src="" width="48" height="48" />
+            </p>
+            <small style="padding-right: 15px;" class="pull-right">Icon thanks to <a href="https://icons8.com/">Icon pack by Icons8</a></small>
+            <p class="last"><a href="https://statistics.kilimo.go.ke/" id="btnCloseUpdateBrowser" title="Close">×</a></p>
         </div>
-        <!--Preloader ends-->
+        <div id="site-container">
+            <!-- Header container-->
+            <div class="container fs-direction-ltr">
+                <div class="col-md-12 kilimo-header">
+                    <header class="header">
+                        <br />
+                        <h1 id="logo-ltr" class="logo">
+                            <a data-link="external" title="FAO homepage" target="_blank" href="https://kilimo.go.ke/">
+                                <img class="img-responsive fao-logo-header" width="500" alt="" src="assets/img/kilimo.jpg" />
+                            </a>
+                        </h1>
 
-        <!-- Theme Switcher Start -->
-        <div class="switch-theme-mode">
-            <label id="switch" class="switch">
-                    <input type="checkbox" onchange="toggleTheme()" id="slider">
-                    <span class="slider round"></span>
-            </label>
-        </div>
-        <!-- Theme Switcher End -->
-
-        <!-- Page Wrapper End -->
-        <div class="page-wrapper">
-
-            <!-- Header Section Start -->
-            <header class="header-wrap">
-                <div class="header-top">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8 col-md-8">
-                                <div class="header-top-left">
-                                    <ul class="contact-info list-style">
-                                        <li>
-                                            <i class="flaticon-phone-call"></i>
-                                            <a href="tel:0800724891">Call: 0800724891</a>
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-email-2"></i>
-                                           <a href="mailto:
-                                           info@kilimo.go.ke">
-                                            info@kilimo.go.ke</a>
-                                        </li>
-                                       
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4">
-                                <div class="header-top-right">
-                                    <div class="select-lang">
-                                        <i class="ri-earth-fill"></i>
-                                        <div class="navbar-option-item navbar-language dropdown language-option">
-                                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false">
-                                                <span class="lang-name"></span>
-                                            </button>
-                                            <div class="dropdown-menu language-dropdown-menu">
-                                                <a class="dropdown-item" href="#">
-                                                   
-                                                    English
-                                                </a>
-                                                
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
+                        <div id="google_search" class="hidden-xs">
+                            <div id="c205206" class="csc-default">
+                                <div class="tx-xinclude-pi1">
+                                    <form action=" " method="get" target="_blank" id="fullsitesearch">
+                                        <input type="hidden" name="cx" value="" />
+                                        <!-- Google CSE Search Box Begins -->
+                                        <input name="q" type="text" class="inputbox" size="18" onblur="this.value=&#39;&#39;" style="border: 0px; background: url('src/images/powered-by-google.svg') 0% 50% no-repeat rgb(255, 255, 255);" />
+                                        <input type="hidden" name="cof" value="FORID:9" />
+                                        <input id="search-submit" type="submit" value="Search" />
+                                        <script type="text/javascript" src="assets/css/brand"></script>
+                                        <!-- Google CSE Search Box Ends -->
+                                    </form>
                                 </div>
                             </div>
                         </div>
+                    </header>
+                </div>
+
+                <div class="col-md-12 kilimo-header hidden-xs clearfix">
+                    <ul class="list-unstyled list-inline fao-menu-list pull-right flip">
+                        <li>
+                            <a data-link="external" target="_blank" href="#">About KilimoSTAT</a>
+                        </li>
+                        <li>
+                            <a data-link="external" target="_blank" href="#">Emerging Issues</a>
+                        </li>
+                        <li>
+                            <a data-link="external" target="_blank" href="#">Counties</a>
+                        </li>
+                        <li>
+                            <a data-link="external" target="_blank" href="#">Sub Sectors</a>
+                        </li>
+                       
+                        <li>
+                            <a data-link="external" target="_blank" href="#">Publications</a>
+                        </li>
+                        <li>
+                            <a data-link="external" target="_blank" href="#">Statistics</a>
+                        </li>
+                        <li>
+                            <a data-link="external" target="_blank" href="#">Partnerships</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-12 clearfix">
+                    <div id="fs-language" class="language-menu pull-right flip">
+                        <ul class="list-unstyled list-inline hidden-xs">
+                            <li>
+                                <a data-locale="en" href="#" class="active">English</a>
+                            </li>
+                            <li>
+                                <a data-locale="sw" href="#">Swahili</a>
+                            </li>
+                           
+                        </ul>
+
+                        <ul class="list-unstyled list-inline visible-xs">
+                            <li>
+                                <a data-locale="en" href="#" class="active">EN</a>
+                            </li>
+                            <li>
+                                <a data-locale="sw" href="#">SW</a>
+                            </li>
+                            
+                        </ul>
                     </div>
                 </div>
-                <div class="header-bottom">
-                    <div class="container">
-                        <nav class="navbar navbar-expand-md navbar-light">
-                           <a class="navbar-brand" href="{% url 'home' %}">
-                                <img class="logo-light" src="{% static 'assets/img/kilimo.jpg' %}" alt="logo">
-                                <img class="logo-dark" src="{% static 'assets/img/kilimo.jpg' %}" alt="logo">
-                            </a>
-                            <div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
-                                <div class="menu-close d-lg-none">
-                                    <a href="javascript:void(0)"> <i class="ri-close-line"></i></a>
-                                </div>
-                                <ul class="navbar-nav ms-auto">
-                                    <li class="nav-item">
-                                        <a href="{% url 'home' %}" class="nav-link active">
-                                            Home
-                                        </a>
-                                        
-                                    </li>
+
+                <div class="col-md-12 hidden-xs">
+                    <h1 class="kilimostat-title"><b>Kilimo</b>STAT</h1>
+                </div>
+            </div>
+
+            <!-- Top menu container -->
+            <div class="container fs-direction-ltr">
+                <div class="col-md-12">
+                    <div class="faostat_ui_menu" id="fs-menu">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                                    <span class="sr-only"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+
+                                <a data-role="fs-menu-home" class="navbar-brand hidden-xs active" href="#">
+                                    <img src="assets/img/home.png">
                                     
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">
-                                            About
-                                            &nbsp;
-                                            <i class="ri-arrow-down-s-fill"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="{% url 'about' %}" class="nav-link">About KilimoSTAT</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="{% url 'faq' %}" class="nav-link">Frequently Asked Questions</a>
-                                            </li>
-                                            
-                                        </ul>
+                                </a>
+
+                                <a class="navbar-brand visible-xs" href="#"> <b>Kilimo</b>STAT </a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="navbar-collapse" aria-expanded="false">
+                                <ul class="nav navbar-nav navbar-left fs-nav-link flip">
+                                    
+                                    <li data-role="fs-menu-data">
+                                        <a class="fs-nav-link" href="#">Home</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Resources &nbsp;
-                                            <i class="ri-arrow-down-s-fill"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            
-                                            <li class="nav-item">
-                                                <a href="{% url 'census' %}" class="nav-link">
-                                                    Agricultural Census
-                                                </a>
-                                               
-                                            </li>
 
-                                            <li class="nav-item">
-                                                <a href="{% url 'definitions' %}" class="nav-link">
-                                                    Definitions and Standards
-                                                </a>
-                                               
-                                            </li>
-                                           
-                                            <li class="nav-item">
-                                                <a href="{% url 'metadata' %}" class="nav-link">Metadata</a>
-                                            </li>
-                                            
-                                            
-                                            <li class="nav-item">
-                                                <a href="{% url 'terms' %}" class="nav-link">Terms and Conditions</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="{% url 'policy' %}" class="nav-link">Open Data Policy</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    Publications
-                                                    &nbsp;
-                                            <i class="ri-arrow-down-s-fill"></i>
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">Bulletins</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">Year Books</a>
-                                                    </li>
-                                                </ul>
-
-
-                                            </li>
-
-                                                                                       
-                                        </ul>
+                                    <li data-role="fs-menu-data">
+                                        <a class="fs-nav-link" href="#">Data</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Media
-                                            &nbsp;
-                                            <i class="ri-arrow-down-s-fill"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    Blog
-                                                    
-                                                </a>
-                                               
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    Contact Us
-                                                </a>
-                                               
-                                            </li>
-                                        </ul>
+                                    <li data-role="fs-menu-country-indicators">
+                                        <a class="fs-nav-link" href="#">Selected Indicators</a>
                                     </li>
                                    
-                                    
+                                    <li data-role="fs-menu-definitions">
+                                        <a class="fs-nav-link" href="#">Definitions and Standards</a>
+                                    </li>
+                                    <li data-role="fs-menu-faq">
+                                        <a class="fs-nav-link" href="#">FAQ</a>
+                                    </li>
                                 </ul>
-                                <div class="other-options md-none">
-                                    
-                                 
-                                </div>
+
+                                <!-- search visible large -->
+                                <ul class="nav navbar-nav navbar-right flip hidden-sm hidden-md">
+                                    <li data-role="fs-search" class="fs-menu-search-container">
+                                        <span class="icojam_search pull-left fs-search-icon"></span>
+                                        <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                                            <input
+                                                data-role="search"
+                                                class="typeahead tt-hint"
+                                                type="text"
+                                                readonly=""
+                                                autocomplete="off"
+                                                spellcheck="false"
+                                                tabindex="-1"
+                                                dir="ltr"
+                                                style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(252, 252, 252);"
+                                            />
+                                            <input
+                                                data-role="search"
+                                                class="typeahead tt-input"
+                                                type="text"
+                                                placeholder="Search an Indicator or Commodity"
+                                                autocomplete="off"
+                                                spellcheck="false"
+                                                dir="auto"
+                                                style="position: relative; vertical-align: top; background-color: transparent;"
+                                            />
+                                            <pre
+                                                aria-hidden="true"
+                                                style="
+                                                    position: absolute;
+                                                    visibility: hidden;
+                                                    white-space: pre;
+                                                    font-family: 'Open Sans', sans-serif;
+                                                    font-size: 13px;
+                                                    font-style: normal;
+                                                    font-variant: normal;
+                                                    font-weight: 400;
+                                                    word-spacing: 0px;
+                                                    letter-spacing: 0px;
+                                                    text-indent: 0px;
+                                                    text-rendering: auto;
+                                                    text-transform: none;
+                                                "
+                                            ></pre>
+                                            <div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-suggestions"></div></div>
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </nav>
-                        <div class="search-area">
-                            <input type="search" placeholder="Search Here..">
-                            <button type="submit"><i class="ri-search-line"></i></button>
-                        </div>
-                        <div class="mobile-bar-wrap">
-                            <button class="searchbtn d-lg-none"><i class="ri-search-line"></i></button>
-                            <div class="mobile-menu d-lg-none">
-                                <a href="javascript:void(0)"><i class="ri-menu-line"></i></a>
+
+                        <!-- search visible small -->
+                        <div class="row visible-sm visible-md">
+                            <div class="col-md-12">
+                                <ul class="nav navbar-nav navbar-right flip">
+                                    <li data-role="fs-search" class="fs-menu-search-container fs-menu-search-container-sm">
+                                        <span class="icojam_search pull-left fs-search-icon"></span>
+                                        <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                                            <input
+                                                data-role="search"
+                                                class="typeahead tt-hint"
+                                                type="text"
+                                                readonly=""
+                                                autocomplete="off"
+                                                spellcheck="false"
+                                                tabindex="-1"
+                                                dir="ltr"
+                                                style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(252, 252, 252);"
+                                            />
+                                            <input
+                                                data-role="search"
+                                                class="typeahead tt-input"
+                                                type="text"
+                                                placeholder="Search an Indicator or Commodity"
+                                                autocomplete="off"
+                                                spellcheck="false"
+                                                dir="auto"
+                                                style="position: relative; vertical-align: top; background-color: transparent;"
+                                            />
+                                            <pre
+                                                aria-hidden="true"
+                                                style="
+                                                    position: absolute;
+                                                    visibility: hidden;
+                                                    white-space: pre;
+                                                    font-family: 'Open Sans', sans-serif;
+                                                    font-size: 13px;
+                                                    font-style: normal;
+                                                    font-variant: normal;
+                                                    font-weight: 400;
+                                                    word-spacing: 0px;
+                                                    letter-spacing: 0px;
+                                                    text-indent: 0px;
+                                                    text-rendering: auto;
+                                                    text-transform: none;
+                                                "
+                                            ></pre>
+                                            <div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-suggestions"></div></div>
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>    
-            <!-- Header Section End -->
+            </div>
+
+            <!--Breadcrumb container -->
+            <!--<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="breadcrumb-container"></div>
+        </div>
+    </div>
+</div>-->
+
+            <!-- Banner Container -->
 
             {% block content %}<!-- default content text (typically empty) -->{% endblock %}
             
