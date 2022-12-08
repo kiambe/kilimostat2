@@ -1,0 +1,292 @@
+{% extends "home/common/base.html" %}
+{% load static %}
+{% block content %}
+            <!-- Hero Section Start -->
+            <section class="hero-wrap style2">
+                <div class="hero-slider-one owl-carousel" data-slider-id="1">
+                    <div class="hero-slide-item hero-slide-one bg-f">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6  col-md-9">
+                                    <div class="hero-content"  data-speed="0.10" data-revert="true">
+                                        <span>KilimoSTAT</span>
+                                        <h1>Agriculture Statistics for Improved Decision Making and Enhacing Food  Security</h1>
+                                        <p>Kilimostat provides data and statistics on Kenya's agricultural sector covering crops, 
+                                            livestock, fisheries, agroforestry, climate change and food & nutrition </p>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+                <div class="hero-slider-thumbs owl-thumbs" data-slider-id="1">
+                    <button class="owl-thumb-item">
+                        <img src="{% static 'assets/img/hero/hero-thumb-1.jpg' %}" alt="Images">
+                    </button>
+                   
+                </div>
+            </section>
+            <!-- Hero Section End -->
+
+            <!--  Section Start -->
+
+
+            <section class="cta-wrap style2 bg-f ptb-100">
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2">
+                            <div class="content-title style1 text-center mb-40 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                                <h2>Explore Data
+                                </h2>
+                            </div>
+                            <div class="cta-btn aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                                
+                                <a href="{% url 'data' %}" class="btn style1">National Data </a> &nbsp;&nbsp;
+                                <a href="{% url 'data' %}" class="btn style2">County Data</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="{% url 'census' %}" class="btn style3">Agricultural Census </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  Section End -->
+
+            
+           
+        
+            <!-- Counter Section Start -->
+            <div class="counter-wrap style2 bg-lochi pt-100 pb-75">
+                
+                <div class="container">
+                    <div class="counter-card-wrap style2">
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="58037"></span>
+                                </h2>
+                                <p>Kenya Total Land Area (1000 Ha)</p>
+                            </div>
+                        </div>
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="27350"></span> (47%)
+                                    
+                                </h2>
+                                <p>Kenya Total Agricultural Land (1000 Ha)</p>
+                            </div>
+                        </div>
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="30687"></span> (53%)
+                                </h2>
+                                <p>Kenya Total Non Agricultural Land (1000 Ha)</p>
+                            </div>
+                        </div>
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="6.4"></span>
+                                </h2>
+                                <p>Total number of Agriculture Households farmers (2019) (Million)</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="counter-card-wrap style2">
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="1.7"></span>
+                                </h2>
+                                <p>Total Number of Crops Farming Households farmers (2019) (Million)</p>
+                            </div>
+                        </div>
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="0.76"></span>
+                                    
+                                </h2>
+                                <p>Total Number of Livestock Farming Households farmers (Million)</p>
+                            </div>
+                        </div>
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="3.9"></span>
+                                </h2>
+                                <p>Total Number of Mixed Farming Households farmers (2019) (Million)</p>
+                            </div>
+                        </div>
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="14.9"></span>
+                                </h2>
+                                <p>Total Agriculture Population ages 18 Years and above (2019) (Million)</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    
+                    <div class="counter-card-wrap style2">
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="62.8"></span>%
+                                </h2>
+                                <p>Share of agriculture population to total population (2019)</p>
+                            </div>
+                        </div>
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="15.2"></span>%
+                                    
+                                </h2>
+                                <p>Share of youth (18-34 years) in agriculture to total population</p>
+                            </div>
+                        </div>
+                        <div class="counter-card style1" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                            <div class="counter-icon">
+                                <i class="flaticon-campaign"></i>
+                            </div>
+                            <div class="counter-text">
+                                <h2 class="counter-num">
+                                    <span class="odometer" data-count="47.2"></span>
+                                </h2>
+                                <p>Mean age of the Household Head in Agriculture</p>
+                            </div>
+                        </div>
+                      
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <!-- Counter Section End -->
+
+
+
+
+
+
+            <!-- Project Section Start -->
+            <section class="project-wrap ptb-100">
+                <div class="container">
+                    <div class="section-title style1 text-center mb-40">
+                       
+                        <span>Emerging Issues <span class="bl-text"> </span></span>
+                        <h2>Latest News</h2>
+                    </div>
+                    <div class="project-slider-one owl-carousel">
+                        <div class="project-card style1" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                            <div class="project-img">
+                                <img src="{% static 'assets/img/covid19.png' %}" alt="Image">
+                            </div>
+                            <div class="project-info">
+                                <img src="{% static 'assets/img/kilimostat.png' %}" alt="Image" class="project-shape">
+                                <h3><a href="{% url 'covid19' %}">Impacts of Covid 19 0n Food Security</a></h3>
+                                <p>According to the “Survey on Socio Economic Impact of COVID-19 on Households
+                                    Report” carried out by KNBS in June 2020, nationally, 78.1 per cent of the households
+                                    reported having enough food stocks (KNBS, July 2020)..</p>
+                                <a href="{% url 'covid19' %}" class="link style1">Read More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card style1" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+                            <div class="project-img">
+                                <img src="{% static 'assets/img/blog/locust.jpg' %}" alt="Image">
+                            </div>
+                            <div class="project-info">
+                                <img src="{% static 'assets/img/blog/locust.jpg' %}" alt="Image" class="project-shape">
+                                <h3><a href="https://kilimo.go.ke/the-national-and-county-governments-have-heightened-surveillance-following-a-possible-second-wave-of-the-locust-invasion-in-the-country/">Locust Invasion and Control</a></h3>
+                                <p>Invasion of the desert locust in Kenya has become the worst in the last 70 years. This has caused a threat to  food security for nearly 3 million Kenyans. </p>
+                                <a href="https://kilimo.go.ke/the-national-and-county-governments-have-heightened-surveillance-following-a-possible-second-wave-of-the-locust-invasion-in-the-country/" class="link style1">Read More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card style1" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
+                            <div class="project-img">
+                                <img src="{% static 'assets/img/blog/faw.jpg' %}" alt="Image">
+                            </div>
+                            <div class="project-info">
+                                <img src="{% static 'assets/img/blog/faw.jpg' %}" alt="Image" class="project-shape">
+                                <h3><a href="https://www.kalro.org/2021/08/23/identification-and-management-of-fall-armyworm-in-kenya/">Fall Army Warms</a></h3>
+                                <p>In Kenya, the pest was first reported in March 2017 in Western Kenya and has since spread countrywide. The pest attacks a wide range of crops but maize and sorghum are the most preferred hosts.</p>
+                                <a href="https://www.kalro.org/2021/08/23/identification-and-management-of-fall-armyworm-in-kenya/" class="link style1">Read More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card style1" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="500">
+                            <div class="project-img">
+                                <img src="{% static 'assets/img/blog/wfp.png' %}" alt="Image">
+                            </div>
+                            <div class="project-info">
+                                <img src="{% static 'assets/img/blog/wfp.png' %}" alt="Image" class="project-shape">
+                                <h3><a href="https://www.wfp.org/publications/state-food-security-and-nutrition-world-sofi-report-2022">The State of Food Security and Nutrition in the World (SOFI) Report - 2022</a></h3>
+                                <p>The 2022 edition of The State of Food Security and Nutrition in the World (SOFI) report presents updates on the food security and nutrition situation around the world, including the latest estimates of the cost and affordability of a healthy diet. </p>
+                                <a href="https://www.wfp.org/publications/state-food-security-and-nutrition-world-sofi-report-2022" class="link style1">Read More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- Project Section End -->
+
+           
+{% endblock %}           
